@@ -1,3 +1,5 @@
+import "./styles/index.scss";
+
 const reworkList = {
     design: 1,
     develop: 2,
