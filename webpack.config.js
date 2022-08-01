@@ -9,6 +9,7 @@ let target = mode === "production" ? "browserslist" : "web";
 module.exports = {
   mode: mode,
   target: target,
+  entry: "./src/index.js",
 
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -50,7 +51,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js"],
   },
   devtool: "source-map",
   devServer: {
