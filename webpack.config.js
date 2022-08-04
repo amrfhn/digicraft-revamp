@@ -81,7 +81,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", ".twig"],
     alias: {
       vue$: "vue/dist/vue.esm.js",
     },
@@ -89,6 +89,7 @@ module.exports = {
   devtool: "source-map",
   devServer: {
     static: "./dist",
-    hot: true,
+    hot: false, //hot set to true to only detect changes made upon save, hot has bug in webpack 5, so alternative gotta use livereload
+    liveReload: true, //livereload will auto reload all files even the file has no changes
   },
 };
