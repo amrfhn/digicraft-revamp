@@ -1,6 +1,6 @@
 import Vue from "vue";
 // Import our custom CSS
-import "./styles/index.scss";
+import "../styles/index.scss";
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
 

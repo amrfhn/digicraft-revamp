@@ -7,11 +7,11 @@
     <title>Webpack Template</title>
   </head>
   <body>
-    <div id="hero" class="hero">
-      <h1>Hello, Bootstrap and Webpack!</h1>
-      <button class="btn btn-primary">Primary button</button>
-    </div>
+    <header></header>
+    <main>
+      {% block main %}
 
-    <img src="./images/digicraft-logo-2021.png" width="250" alt="" />
+      {% endblock %}
+    </main>
   </body>
 </html>

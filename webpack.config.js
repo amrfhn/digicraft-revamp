@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 const path = require("path");
+const fs = require("fs");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -7,10 +8,14 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 let mode = process.env.NODE_ENV === "production" ? "production" : "development";
 let target = mode === "production" ? "browserslist" : "web";
 
+const pages = fs
+  .readdirSync(path.resolve(__dirname, "src"))
+  .filter((fileName) => fileName.endsWith(".twig"));
+
 module.exports = {
   mode: mode,
   target: target,
-  entry: "./src/index.js",
+  entry: "./src/js/index.js",
 
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -19,6 +24,18 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.twig$/,
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              attrs: [":src"],
+            },
+          },
+          "twig-html-loader",
+        ],
+      },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource", //inline (small sizes images and stored in js) or resource (big size images)
@@ -47,19 +64,27 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCSSExtractPlugin(),
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    }),
+    ...pages.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          template: "src/" + page,
+          fileName: page.replace(".twig", ".html"),
+          inject: true,
+        })
+    ),
+    // new HtmlWebpackPlugin({
+    //   template: "./src/index.html",
+    // }),
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-    })
+      $: "jquery",
+      jQuery: "jquery",
+    }),
   ],
   resolve: {
     extensions: [".js", ".jsx"],
     alias: {
       vue$: "vue/dist/vue.esm.js",
-    }
+    },
   },
   devtool: "source-map",
   devServer: {
