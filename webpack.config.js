@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const path = require("path");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -49,9 +50,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    })
   ],
   resolve: {
-    extensions: [".js"],
+    extensions: [".js", ".jsx"],
+    alias: {
+      vue$: "vue/dist/vue.esm.js",
+    }
   },
   devtool: "source-map",
   devServer: {
