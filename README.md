@@ -1,10 +1,8 @@
 # Webpack Template For FE Development
 
-======================================
-
 A Webpack setup with Vue framework, Bootstrap 5, Jquery, and Twig compiler.
 
-Please create a new branch to start developing a new project, or you can `bash git clone <repo directory> ` to your machine.
+Please create a new branch to start developing a new project, or you can `git clone <repo directory>` to your machine.
 
 ## Start using for a new project, or playground
 
@@ -44,4 +42,3 @@ After running a build command, you can see the output without opening a browser 
 ```bash
 node dist/main.js
 ```
-    
