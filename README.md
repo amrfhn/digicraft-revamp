@@ -1,4 +1,4 @@
-# Webpack Template For FE Development
+# Webpack 5 Template For FE Development
 
 A Webpack setup with Vue framework, Bootstrap 5, Jquery, and Twig compiler.
 
