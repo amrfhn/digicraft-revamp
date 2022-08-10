@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 let mode = process.env.NODE_ENV === "production" ? "production" : "development";
-let target = mode === "production" ? "browserslist" : "web";
+let target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
 
 const pages = fs
   .readdirSync(path.resolve(__dirname, "src"))
@@ -100,8 +100,9 @@ module.exports = {
   },
   devtool: "source-map",
   devServer: {
-    static: "./dist",
-    hot: false, //hot set to true to only detect changes made upon save, hot has bug in webpack 5, so alternative gotta use livereload
-    liveReload: true, //livereload will auto reload all files even the file has no changes
+    static: path.resolve(__dirname, './src'),
+    hot: true, //hot set to true to only detect changes made upon save, hot has bug in webpack 5, so alternative gotta use livereload
+    // static: "./dist",
+    // liveReload: true, //livereload will auto reload all files even the file has no changes
   },
 };
