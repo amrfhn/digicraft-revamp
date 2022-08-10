@@ -1,0 +1,10 @@
+// @use '../mixins';
+@include font-face("Roboto-Regular", "../assets/fonts/Roboto-Regular", 400, normal, ttf);
+@include font-face("Bungee-Regular", "../assets/fonts/Bungee-Regular", 400, normal, ttf);
+
+// @font-face {
+//     font-family: 'Roboto-Regular';
+//     src: url('../../assets/fonts/Roboto-Regular.ttf') format('ttf');
+//     font-weight: 400;
+//     font-style: normal;
+// }

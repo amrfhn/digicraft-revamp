@@ -1,4 +1,7 @@
-@use "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
 
-@use 'global';
-@use 'hero';
+@import 'mixins';
+@import 'customs/fonts';
+
+@import 'global';
+@import 'hero';

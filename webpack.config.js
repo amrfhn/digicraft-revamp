@@ -19,7 +19,8 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    assetModuleFilename: "images/[hash][ext][query]", //store images to folder in dist
+    assetModuleFilename: "assets/[hash][ext]", //store images to folder in dist
+    // filename: "js/[name].[hash].js",
   },
 
   module: {
@@ -37,8 +38,18 @@ module.exports = {
         ],
       },
       {
+        test: /\.(eot|otf|ttf|woff|woff2)$/,
+        type: "asset",
+        generator: {
+          filename: "assets/fonts/[name][ext]",
+        },
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource", //inline (small sizes images and stored in js) or resource (big size images)
+        generator: {
+          filename: "assets/images/[hash][ext][query]",
+        },
       },
       {
         test: /\.(s[ac]|c)ss$/i,
@@ -49,6 +60,7 @@ module.exports = {
           },
           "css-loader",
           "postcss-loader",
+          { loader: "resolve-url-loader", options: { sourceMap: true } },
           "sass-loader",
         ],
       },
