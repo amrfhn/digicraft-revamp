@@ -19,8 +19,8 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    assetModuleFilename: "assets/[hash][ext]", //store images to folder in dist
-    // filename: "js/[name].[hash].js",
+    assetModuleFilename: "assets/images/[hash][ext][query]", //store images to folder in dist
+    filename: "js/[name].[hash].js",
   },
 
   module: {
@@ -47,16 +47,13 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource", //inline (small sizes images and stored in js) or resource (big size images)
-        generator: {
-          filename: "assets/images/[hash][ext][query]",
-        },
       },
       {
         test: /\.(s[ac]|c)ss$/i,
         use: [
           {
             loader: MiniCSSExtractPlugin.loader,
-            options: { publicPath: "" },
+            options: { publicPath: "/" },
           },
           "css-loader",
           "postcss-loader",
@@ -75,12 +72,14 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new MiniCSSExtractPlugin(),
+    new MiniCSSExtractPlugin({
+      filename: "assets/css/bundle.[hash].css"
+    }),
     ...pages.map(
       (page) =>
         new HtmlWebpackPlugin({
           template: "src/" + page,
-          fileName: page.replace(".twig", ".html"),
+          filename: page.replace(".twig", ".html"),
           inject: true,
         })
     ),
@@ -104,5 +103,6 @@ module.exports = {
     hot: true, //hot set to true to only detect changes made upon save, hot has bug in webpack 5, so alternative gotta use livereload
     // static: "./dist",
     // liveReload: true, //livereload will auto reload all files even the file has no changes
+    historyApiFallback: true
   },
 };
