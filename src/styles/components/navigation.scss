@@ -1,0 +1,26 @@
+div.nav-container {
+    nav.navbar {
+        height: 95px;
+        background-color: transparent;
+
+        @include media-breakpoint-up(md) {
+            height: 90px;
+        }
+    }
+
+    img.brand-logo {
+        width: 150px;
+        height: 100%;
+
+        @include media-breakpoint-up(md) {
+            width: 250px;
+        }
+    }
+    li.nav-item {
+        font-size: 18px;
+        padding: 32px 24px;
+        a.nav-link {
+            color: $primary;
+        }
+    }
+}

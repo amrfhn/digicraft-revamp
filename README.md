@@ -48,5 +48,3 @@ After running a build command, you can see the output without opening a browser 
 ```bash
 node dist/main.js
 ```
-=======
-

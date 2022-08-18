@@ -1,1 +1,101 @@
-$bg: peachpuff;
+$p1:                            #ffffff;
+$p2:                            #ffc61a;
+
+$s1:                            #ffffff99;
+
+/** COLORS **/
+$gray-100:                      #EEEEEE;
+$gray-200:                      #f7f7f7;
+$gray-300:                      #c8c8c8;
+$gray-400:                      #b8b8b8;
+$gray-600:                      #919191;
+$gray-900:                      #5a5a5a;
+$digicraft-black:               #000000;
+
+$grays: map-merge(
+    (
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "600": $gray-600,
+        "900": $gray-900
+    ),
+    $grays
+);
+
+$primary:                       $p1;
+$secondary:                     $p2;
+$light:                         $gray-100 !default;
+$dark:                          $gray-900 !default;
+$theme-colors: map-merge(
+    $theme-colors, 
+    (
+        "primary": $p1,
+        "secondary": $p2,
+        "light": $light,
+        "dark": $dark
+    )
+);
+
+/** SPACING **/
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 6)
+  ),
+  $spacers
+);
+
+/** TYPOGRAPHY **/
+$font-family-base:              "Switzer-Regular", "sans-serif";
+
+$font-weight-normal:            400;
+$font-weight-bold:              700;
+
+$headings-font-weight:          500;
+$headings-font-family:          "ClashDisplay-Medium", "sans-serif";
+$headings-line-height:          1;
+
+$h1-font-size:                  $font-size-base * 4.5;
+$h2-font-size:                  $font-size-base * 4;
+$h3-font-size:                  $font-size-base * 3;
+$h4-font-size:                  $font-size-base * 2.5;
+$h5-font-size:                  $font-size-base * 2;
+$h6-font-size:                  $font-size-base * 1.5;
+
+$display1-size:                 6rem;
+$display2-size:                 5.5rem;
+$display3-size:                 4.5rem;
+$display4-size:                 4rem;
+$display5-size:                 3.5rem;
+$display6-size:                 3rem;
+
+$display1-weight:               800;
+$display2-weight:               800;
+$display3-weight:               800;
+$display4-weight:               800;
+
+$lead-font-weight:              600;
+
+/** BUTTONS & INPUTS **/
+$input-btn-font-family:         $font-family-base;
+$btn-font-weight:               $font-weight-bold;
+$btn-border-width:              2px;
+$btn-padding-y:                 .8rem;
+$btn-padding-x:                 1rem;
+
+$input-padding-x:               1rem;
+
+/** COMPONENTS **/
+$badge-padding-y:                   .8em;
+$badge-padding-x:                   1rem;
+
+$topbar-height: 100px;
+$topbar-height-high-pixel-density: 80px;
+$leftpane-width: 100px;
+$leftpane-width-high-pixel-density: 80px;
