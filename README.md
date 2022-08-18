@@ -1,4 +1,4 @@
-# Webpack 5 Template For FE Development
+# Webpack 5 and 4 Template For FE Development
 
 A Webpack setup with Vue framework, Bootstrap 5, Jquery, and Twig compiler.
 
@@ -33,6 +33,12 @@ npm run watch
 
 ```bash
 npm start
+```
+
+### Deploy to DEV Server (Firebase)
+
+```bash
+npm run deploy-dev
 ```
 
 ## See output without browser

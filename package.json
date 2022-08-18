@@ -8,7 +8,8 @@
     "watch": "webpack --watch",
     "build": "cross-env NODE_ENV=production webpack",
     "build-dev": "webpack",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "deploy-dev": "cross-env NODE_ENV=production webpack && firebase deploy"
   },
   "author": "Amir Jefri",
   "license": "MIT",
@@ -47,5 +48,8 @@
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.3"
+  },
+  "dependencies": {
+    "firebase": "^9.9.2"
   }
 }
