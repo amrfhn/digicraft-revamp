@@ -1,0 +1,27 @@
+.footer-container {
+    min-height: 400px;
+
+    footer {
+        padding-top: 85px;
+        border-top: 1px solid $gray-700;
+        margin: 50px auto 0;
+
+        .footer-nav {
+            font-family: $headings-font-family;
+            list-style: none;
+            font-size: $h4-font-size;
+
+            .nav-item {
+                margin-right: 0;
+
+                @include media-breakpoint-up(lg) {
+                    margin-right: 110px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

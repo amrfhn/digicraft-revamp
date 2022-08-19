@@ -1,0 +1,86 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $primary;
+  font-family: $headings-font-family;
+  line-height: 0.9;
+  font-weight: 500;
+}
+
+h1,
+.h1 {
+  font-size: $display1-size;
+}
+
+h2,
+.h2 {
+  font-size: $display2-size;
+}
+
+h3,
+.h3 {
+  font-size: $display3-size;
+}
+
+h4,
+.h4 {
+  font-size: $display4-size;
+}
+
+h5,
+.h5 {
+  font-size: $display5-size;
+}
+
+h6,
+.h6 {
+  font-size: $display6-size;
+}
+
+a,
+.nav-link {
+  font-family: $font-family-base;
+  &:hover,
+  &:focus {
+    color: $p2 !important;
+    transition: color 400ms ease;
+  }
+}
+
+.w-30 {
+  width: 30% !important;
+}
+
+.w-md-30 {
+  @include media-breakpoint-up(md) {
+    width: 30% !important;
+  }
+} 
+
+.w-md-50 {
+  @include media-breakpoint-up(md) {
+    width: 50% !important;
+  }
+}
+
+.text-primary {
+  color: $p2;
+}
+
+.text-secondary {
+  color: $s1;
+}
+
+.lead {
+  font-family: $font-family-base;
+  font-size: 18px;
+}

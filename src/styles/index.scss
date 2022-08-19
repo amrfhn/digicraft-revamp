@@ -2,11 +2,15 @@
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/mixins";
 @import "node_modules/bootstrap/scss/variables";
-
-@import 'mixins';
-@import 'variables';
+@import 'customs/mixins';
+@import 'customs/variables';
 @import 'customs/fonts';
 
-@import 'global';
-@import 'hero';
+// Components
 @import './components/navigation';
+@import './components/footer';
+
+// Utils
+@import 'customs/global';
+@import 'customs/utilities';
+

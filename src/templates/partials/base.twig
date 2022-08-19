@@ -7,13 +7,15 @@
     <title>Webpack Template</title>
   </head>
   <body>
-    <header>
-      {% include '../components/navigation.twig' %}
-    </header>
     <main>
+      {# <header> #}
+        {% include '../components/navigation.twig' %}
+      {# </header> #}
       {% block main %}
 
       {% endblock %}
+
+      {% include '../components/footer.twig' %}
     </main>
   </body>
 </html>
