@@ -1,0 +1,18 @@
+.hero-img-container {
+    top: 0;
+    right: 0;
+
+    img.hero-img {
+        width: 100%;
+        height: 70vh;
+    }
+
+    .overlay {
+        background-color: #000;
+        opacity: .25;
+        width: 100%;
+        height: 70vh;
+        top: 0;
+        right: 0;
+    }
+}

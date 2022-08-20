@@ -3,6 +3,7 @@ div.nav-container {
     nav.navbar {
         height: 95px;
         background-color: transparent;
+        z-index: 2;
 
         @include media-breakpoint-up(md) {
             height: 90px;

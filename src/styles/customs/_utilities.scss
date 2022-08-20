@@ -17,41 +17,55 @@ h6,
 }
 
 h1,
-.h1 {
-  font-size: $display1-size;
+.h1,
+.display-1 {
+  @include media-breakpoint-up(md) {
+    font-size: $display1-size;
+  }
 }
 
 h2,
 .h2 {
-  font-size: $display2-size;
+  @include media-breakpoint-up(md) {
+    font-size: $display2-size;
+  }
 }
 
 h3,
 .h3 {
-  font-size: $display3-size;
+  @include media-breakpoint-up(md) {
+    font-size: $display3-size;
+  }
 }
 
 h4,
 .h4 {
-  font-size: $display4-size;
+  @include media-breakpoint-up(md) {
+    font-size: $display4-size;
+  }
 }
 
 h5,
 .h5 {
-  font-size: $display5-size;
+  @include media-breakpoint-up(md) {
+    font-size: $display5-size;
+  }
 }
 
 h6,
 .h6 {
-  font-size: $display6-size;
+  @include media-breakpoint-up(md) {
+    font-size: $display6-size;
+  }
 }
 
 a,
 .nav-link {
   font-family: $font-family-base;
+
   &:hover,
   &:focus {
-    color: $p2 !important;
+    color: $p2  !important;
     transition: color 400ms ease;
   }
 }
@@ -64,7 +78,7 @@ a,
   @include media-breakpoint-up(md) {
     width: 30% !important;
   }
-} 
+}
 
 .w-md-50 {
   @include media-breakpoint-up(md) {
@@ -83,4 +97,27 @@ a,
 .lead {
   font-family: $font-family-base;
   font-size: 18px;
+}
+
+.container {
+  @include media-breakpoint-down(lg) {
+    padding-right: calc(var(--bs-gutter-x) * 1.5);
+    padding-left: calc(var(--bs-gutter-x) * 1.5);
+  }
+}
+
+.zindex-1 {
+  z-index: 1;
+}
+.zindex-2 {
+  z-index: 2;
+}
+.zindex-3 {
+  z-index: 3;
+}
+.zindex-4 {
+  z-index: 4;
+}
+.zindex-5 {
+  z-index: 5;
 }

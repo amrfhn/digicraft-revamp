@@ -2,14 +2,24 @@
     min-height: 400px;
 
     footer {
-        padding-top: 85px;
+        padding-top: 50px;
         border-top: 1px solid $gray-700;
         margin: 50px auto 0;
+
+        @include media-breakpoint-up(md) {
+            padding-top: 85px;
+        }
 
         .footer-nav {
             font-family: $headings-font-family;
             list-style: none;
-            font-size: $h4-font-size;
+            font-size: $h6-font-size;
+            flex-direction: column;
+
+            @include media-breakpoint-up(md) {
+                font-size: $h4-font-size;
+                flex-direction: row;
+            }
 
             .nav-item {
                 margin-right: 0;
