@@ -6,8 +6,8 @@ import * as bootstrap from 'bootstrap'
 
 
 // Import the JS components
-import "./components/scrollmagic";
-
+// import "./components/scrollmagic";
+import "./components/navigation";
 
 const reworkList = {
     design: 1,

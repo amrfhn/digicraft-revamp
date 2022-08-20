@@ -1,18 +1,52 @@
-.hero-img-container {
-    top: 0;
+.hero {
+  .hero-img-container {
     right: 0;
+    top: 140px;
+
+    @include media-breakpoint-up(lg) {
+      top: 0;
+    }
 
     img.hero-img {
-        width: 100%;
+      width: 100%;
+      height: auto;
+
+      @include media-breakpoint-up(md) {
+        height: 37vh;
+      }
+
+      @include media-breakpoint-up(lg) {
         height: 70vh;
+      }
     }
 
     .overlay {
-        background-color: #000;
-        opacity: .25;
-        width: 100%;
+      background-color: #000;
+      width: 100%;
+      opacity: .25;
+      height: 37vh;
+      top: 0;
+      right: 0;
+
+      @include media-breakpoint-up(md) {
+        height: 37vh;
+      }
+
+      @include media-breakpoint-up(lg) {
         height: 70vh;
-        top: 0;
-        right: 0;
+      }
     }
+  }
+
+  .title-container {
+    margin-top: 168px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 225px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 0px;
+    }
+  }
 }

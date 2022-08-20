@@ -19,42 +19,42 @@ h6,
 h1,
 .h1,
 .display-1 {
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     font-size: $display1-size;
   }
 }
 
 h2,
 .h2 {
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     font-size: $display2-size;
   }
 }
 
 h3,
 .h3 {
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     font-size: $display3-size;
   }
 }
 
 h4,
 .h4 {
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     font-size: $display4-size;
   }
 }
 
 h5,
 .h5 {
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     font-size: $display5-size;
   }
 }
 
 h6,
 .h6 {
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     font-size: $display6-size;
   }
 }
@@ -101,8 +101,8 @@ a,
 
 .container {
   @include media-breakpoint-down(lg) {
-    padding-right: calc(var(--bs-gutter-x) * 1.5);
-    padding-left: calc(var(--bs-gutter-x) * 1.5);
+    padding-right: calc(var(--bs-gutter-x) * 1);
+    padding-left: calc(var(--bs-gutter-x) * 1);
   }
 }
 
