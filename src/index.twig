@@ -1,6 +1,6 @@
-{% import "templates/components/hero-title.twig" as title %}
-{% import "templates/components/card-tiles.twig" as cardTiles %}
-{% import "templates/components/small-subtitle.twig" as subtitle %}
+{% import 'templates/components/hero-title.twig' as title %}
+{% import 'templates/components/card-tiles.twig' as cardTiles %}
+{% import 'templates/components/small-subtitle.twig' as subtitle %}
 
 {% extends 'templates/partials/base.twig' %}
 {% block main %}
@@ -10,37 +10,36 @@
         <img class="hero-img" src="./assets/images/hero.png" alt="digicraft-hero-image" />
         <div class="overlay position-absolute zindex-1"></div>
       </div>
-      <div class="position-relative zindex-1 ms-lg-5 title-container">
-        {{ title.stringValue('display-1','Creative Meets Technology') }}
-      </div>
+      <div class="position-relative zindex-1 ms-lg-5 title-container">{{ title.stringValue('display-1', 'Creative Meets Technology') }}</div>
     </div>
   </div>
 
-
   <div class="container ms-lg-5 pb-5">
-    <div class="3-cards-container d-flex justify-content-start ms-lg-5 flex-column flex-lg-row mt-5">
-        {{ cardTiles.card('Strategy','We identify business needs') }}
-        {{ cardTiles.card('Design','We create interfaces with enhanced usability') }}
-        {{ cardTiles.card('Development','We develop smart and modern solutions') }}
-    </div>
+    <div class="3-cards-container d-flex justify-content-start ms-lg-5 flex-column flex-lg-row mt-5">{{ cardTiles.card('Strategy', 'We identify business needs') }}
+      {{ cardTiles.card('Design', 'We create interfaces with enhanced usability') }}
+      {{ cardTiles.card('Development', 'We develop smart and modern solutions') }}</div>
   </div>
 
   <div class="container pt-2 pt-lg-5">
     <div class="ms-lg-5">
       <div class="position-relative zindex-2">
         {{ subtitle.subtitle('Welcome') }}
-        <div class="w-100 w-lg-75">
-          {{ title.stringValue('display-1','How we help you level-up') }}
-        </div>
+        <div class="w-100 w-lg-75">{{ title.stringValue('display-1', 'How we help you level-up') }}</div>
       </div>
 
-      <div class="d-flex how-we-help-container position-relative zindex-1">
+      <div class="d-flex how-we-help-container position-relative zindex-1 flex-lg-row flex-column">
         <div class="img-container position-relative">
-          <img src="./assets/images/how-we-help.jpg" alt="how-we-help-you">
+          <img src="./assets/images/how-we-help.jpg" alt="how-we-help-you" />
           <div class="overlay"></div>
+        </div>
+        <div class="description-container p-3 p-lg-5">
+          <p class="display-6 description mb-0 pb-5">We thrive on conceptualising and designing digital products and integrated tech solutions to help you spend wiser and grow faster.</p>
+          <div class="card-container d-flex flex-lg-row flex-column">
+            {{ cardTiles.card('Services', 'Our high-energy team of digital experts are focused on creating customised solutions for the business challenge at hand.') }}
+            {{ cardTiles.card('About Us', 'We’re a group of very different people, from varying backgrounds, who are passionate about solving business challenges through the use of digital.') }}
+          </div>
         </div>
       </div>
     </div>
   </div>
-
 {% endblock %}

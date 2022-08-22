@@ -4,6 +4,7 @@
   @include media-breakpoint-up(lg) {
     margin-bottom: 90px;
   }
+
   .hero-img-container {
     right: 0;
     top: 140px;
@@ -46,19 +47,24 @@
 
 .how-we-help-container {
   margin-top: -6%;
+
   @include media-breakpoint-up(lg) {
     margin-top: -4%;
   }
 
   .img-container {
     width: 100%;
+
     @include media-breakpoint-up(lg) {
       width: 400px;
+      min-width: 400px;
     }
+
     img {
       width: 100%;
       height: 100%;
     }
+
     .overlay {
       position: absolute;
       background-color: #000;
@@ -68,4 +74,24 @@
       top: 0;
     }
   }
+
+  .description-container {
+
+    // padding: 40px;
+    p.description {
+      font-weight: 500;
+    }
+
+    .card {
+      min-width: 50%;
+      margin-right: 30px;
+
+      .card-body {
+        @include media-breakpoint-down(lg) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
 }
