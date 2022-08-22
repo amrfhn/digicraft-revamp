@@ -42,16 +42,30 @@
       }
     }
   }
+}
 
-  .title-container {
-    margin-top: 168px;
+.how-we-help-container {
+  margin-top: -6%;
+  @include media-breakpoint-up(lg) {
+    margin-top: -4%;
+  }
 
-    @include media-breakpoint-up(md) {
-      margin-top: 225px;
-    }
-
+  .img-container {
+    width: 100%;
     @include media-breakpoint-up(lg) {
-      margin-top: 0px;
+      width: 400px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .overlay {
+      position: absolute;
+      background-color: #000;
+      width: 100%;
+      opacity: .25;
+      height: 100%;
+      top: 0;
     }
   }
 }

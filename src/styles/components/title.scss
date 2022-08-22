@@ -1,0 +1,29 @@
+.display-subtitle {
+  margin-bottom: 0;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 14px;
+  }
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 100vw;
+  background-color: $p2;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.title-container {
+  margin-top: 168px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 225px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 0px;
+  }
+}

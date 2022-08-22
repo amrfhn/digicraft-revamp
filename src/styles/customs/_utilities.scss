@@ -86,6 +86,12 @@ a,
   }
 }
 
+.w-lg-75 {
+  @include media-breakpoint-up(lg) {
+    width: 75% !important;
+  }
+}
+
 .text-primary {
   color: $p2;
 }

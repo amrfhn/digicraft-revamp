@@ -1,5 +1,6 @@
 .card {
   background-color: transparent;
+  border: 0;
 
   @include media-breakpoint-up(lg) {
     margin-right: 72px;
