@@ -1,4 +1,5 @@
 {% import "templates/components/hero-title.twig" as title %}
+{% import "templates/components/card-tiles.twig" as cardTiles %}
 
 {% extends 'templates/partials/base.twig' %}
 {% block main %}
@@ -8,15 +9,23 @@
         <img class="hero-img" src="./assets/images/hero.png" alt="digicraft-hero-image" />
         <div class="overlay position-absolute zindex-1"></div>
       </div>
-      <div class="position-relative zindex-1 title-container">
+      <div class="position-relative zindex-1 ms-lg-5 title-container">
         {{ title.stringValue('display-1','Creative Meets Technology') }}
       </div>
-      <button class="btn btn-primary">Primary buttons</button>
     </div>
+  </div>
 
-    <div class="mt-5">
-      <p>i am here</p>
-      <img src="./assets/images/basf.svg" width="250" alt="" />
+
+  <div class="container">
+    <div class="3-cards-container d-flex justify-content-start ms-lg-5 flex-column flex-lg-row mt-5">
+        {{ cardTiles.card('Strategy','We identify business needs') }}
+        {{ cardTiles.card('Design','We create interfaces with enhanced usability') }}
+        {{ cardTiles.card('Development','We develop smart and modern solutions') }}
     </div>
+  </div>
+
+  <div class="mt-5">
+    <p>i am here</p>
+    <img src="./assets/images/basf.svg" width="250" alt="" />
   </div>
 {% endblock %}

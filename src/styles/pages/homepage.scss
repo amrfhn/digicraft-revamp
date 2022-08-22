@@ -1,4 +1,9 @@
 .hero {
+  margin-bottom: 40px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 90px;
+  }
   .hero-img-container {
     right: 0;
     top: 140px;

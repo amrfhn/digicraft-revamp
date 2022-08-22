@@ -1,0 +1,18 @@
+.card {
+  background-color: transparent;
+
+  @include media-breakpoint-up(lg) {
+    margin-right: 72px;
+    max-width: 200px;
+  }
+
+  .card-body {
+    .card-title {
+      font-size: 22px;
+    }
+
+    .card-text {
+      color: $s1;
+    }
+  }
+}
