@@ -3,6 +3,10 @@
     .card-title {
       font-size: 22px;
     }
+
+    .card-text {
+      color: $s1;
+    }
   }
 
   &.variant-small {
@@ -19,9 +23,7 @@
         font-size: 22px;
       }
 
-      .card-text {
-        color: $s1;
-      }
+
     }
   }
 
