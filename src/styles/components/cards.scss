@@ -1,19 +1,44 @@
 .card {
-  background-color: transparent;
-  border: 0;
-
-  @include media-breakpoint-up(lg) {
-    margin-right: 72px;
-    max-width: 200px;
-  }
-
   .card-body {
     .card-title {
       font-size: 22px;
     }
+  }
 
-    .card-text {
-      color: $s1;
+  &.variant-small {
+    background-color: transparent;
+    border: 0;
+
+    @include media-breakpoint-up(lg) {
+      margin-right: 72px;
+      max-width: 200px;
+    }
+
+    .card-body {
+      .card-title {
+        font-size: 22px;
+      }
+
+      .card-text {
+        color: $s1;
+      }
+    }
+  }
+
+  &.variant-headline {
+    background-color: #1d1c1c;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 20px;
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      min-height: 210px;
+      max-width: calc(50% - 40px);
+      flex: 1 calc(50% - 40px);
+      margin-right: 40px;
+      margin-bottom: 40px;
+
     }
   }
 }

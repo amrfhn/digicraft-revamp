@@ -1,5 +1,6 @@
 {% import 'templates/components/hero-title.twig' as title %}
-{% import 'templates/components/card-tiles.twig' as cardTiles %}
+{% import 'templates/components/card-small.twig' as cardSmall %}
+{% import 'templates/components/card-headline.twig' as cardHeadline %}
 {% import 'templates/components/small-subtitle.twig' as subtitle %}
 
 {% extends 'templates/partials/base.twig' %}
@@ -15,12 +16,12 @@
   </div>
 
   <div class="container ms-lg-5 pb-5">
-    <div class="3-cards-container d-flex justify-content-start ms-lg-5 flex-column flex-lg-row mt-5">{{ cardTiles.card('Strategy', 'We identify business needs') }}
-      {{ cardTiles.card('Design', 'We create interfaces with enhanced usability') }}
-      {{ cardTiles.card('Development', 'We develop smart and modern solutions') }}</div>
+    <div class="3-cards-container d-flex justify-content-start ms-lg-5 flex-column flex-lg-row mt-5">{{ cardSmall.card('Strategy', 'We recognise needs for businesses.') }}
+      {{ cardSmall.card('Design', 'We build interfaces with better usability.') }}
+      {{ cardSmall.card('Development', 'We develop smart and modern solutions.') }}</div>
   </div>
 
-  <div class="container pt-2 pt-lg-5">
+  <div class="container pt-2 pt-lg-5 pb-5">
     <div class="ms-lg-5">
       <div class="position-relative zindex-2">
         {{ subtitle.subtitle('Welcome') }}
@@ -33,12 +34,37 @@
           <div class="overlay"></div>
         </div>
         <div class="description-container p-3 p-lg-5">
-          <p class="display-6 description mb-0 pb-5">We thrive on conceptualising and designing digital products and integrated tech solutions to help you spend wiser and grow faster.</p>
-          <div class="card-container d-flex flex-lg-row flex-column">
-            {{ cardTiles.card('Services', 'Our high-energy team of digital experts are focused on creating customised solutions for the business challenge at hand.') }}
-            {{ cardTiles.card('About Us', 'We’re a group of very different people, from varying backgrounds, who are passionate about solving business challenges through the use of digital.') }}
-          </div>
+          <p class="display-6 description mb-0 pb-5">We thrive on developing and designing digital products and integrated technology solutions to help you spend wisely and grow faster.</p>
+          <div class="card-container d-flex flex-lg-row flex-column">{{ cardSmall.card('Services', 'We are committed on delivering technology, innovation, and value to help our clients address their business challenges.') }}
+            {{ cardSmall.card('About Us', 'We are experts in all areas of software development and digital solutions, and we strive to provide the best solutions for each unique use case.') }}</div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pt-lg-5 pb-5">
+    <div class="ms-lg-5">
+      <div class="position-relative zindex-2">
+        {{ subtitle.subtitle('Expertise') }}
+        <div class="w-100 w-lg-75 mb-5">{{ title.stringValue('display-3', 'Our Services') }}</div>
+      </div>
+
+      <div class="d-flex justify-content-start flex-wrap flex-lg-row flex-column">{{ cardHeadline.card('Web Development', 'Build robust and intuitive web experiences that scales easily. We specialize in building modern web apps, websites and single page applications using the latest technologies and best practices.') }}
+
+        {{ cardHeadline.card('UI/UX', 'Engaging digital experiences, built for humans. We specialize in translating business requirements into rich user experiences that your customers will love.') }}
+
+        {{ cardHeadline.card('API Service', 'Engaging digital experiences, built for humans. We specialize in translating business requirements into rich user experiences that your customers will love.') }}
+
+        {{ cardHeadline.card('Analytics', 'We can help you capture valuable insights and metrics into how your customers behave throughout your entire digital experience. This lets your business better target your customers and increase conversion rates.') }}
+
+        {{ cardHeadline.card('Consulting', 'Leverage on LWDs team of subject matter experts (SME) to plan and drive your businesss digtal transformation.') }}</div>
+    </div>
+  </div>
+
+  <div class="container pt-lg-5">
+    <div class="ms-lg-5">
+      <div class="position-relative zindex-2">
+        <div class="w-100 w-lg-75 mb-5">{{ title.stringValue('display-3', 'Our Clients') }}</div>
       </div>
     </div>
   </div>

@@ -1,8 +1,9 @@
 {% macro card(cardTitle, cardDescription) %}
-<div class="card">
+<div class="card variant-headline">
   <div class="card-body">
     <h5 class="card-title">{{cardTitle}}</h5>
     <p class="card-text">{{cardDescription}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
 {% endmacro %}
