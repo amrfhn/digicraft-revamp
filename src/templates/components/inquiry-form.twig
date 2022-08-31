@@ -1,0 +1,60 @@
+<div id="inquiryForm">
+  <validation-observer ref="inquiryForm" v-slot="{ handleSubmit}">
+      <form ref="form" @submit.prevent="handleSubmit(onSubmit)">
+        <validation-provider slim rules="required" v-slot="{failedRules, errors}">
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <select class="form-select form-select" aria-label=".form-select subject" id="subject" v-model="formData.subject">
+                <option selected value="" disabled>Choose a subject</option>
+                <option value="I need a website">I need a website</option>
+                <option value="I need a digital invitation card">I need a digital invitation card</option>
+                <option value="UI/UX for my application">I need UI/UX for my application</option>
+                <option value="Others">Others</option>
+            </select>
+            <div class="text-danger" v-if="errors.length > 0">
+              <small class="error-message" v-if="failedRules.required">This field is required</small>
+            </div>
+          </div>
+        </validation-provider>
+        <validation-provider slim rules="required" v-slot="{ failedRules, errors }">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="name" class="form-control" id="name" placeholder="Raed Gibran" v-model="formData.name" />
+            <div class="text-danger" v-if="errors.length > 0">
+              <small class="error-message" v-if="failedRules.required">This field is required</small>
+            </div>
+          </div>
+        </validation-provider>
+        <validation-provider slim rules="required" v-slot="{ failedRules, errors }">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="raed.gibran@example.com" v-model="formData.email" />
+            <div class="text-danger" v-if="errors.length > 0">
+              <small class="error-message" v-if="failedRules.required">This field is required</small>
+            </div>
+          </div>
+        </validation-provider>
+        <validation-provider slim rules="required" v-slot="{ failedRules, errors }">
+          <div class="mb-3">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input type="number" class="form-control" id="phoneNumber" placeholder="0123456789" v-model="formData.phoneNumber" />
+            <div class="text-danger" v-if="errors.length > 0">
+              <small class="error-message" v-if="failedRules.required">This field is required</small>
+            </div>
+          </div>
+        </validation-provider>
+        <validation-provider slim rules="required" v-slot="{ failedRules, errors }">
+          <div class="mb-4">
+            <label for="description" class="form-label">Describe your needs</label>
+            <textarea class="form-control" id="description" rows="3" placeholder="I need a website to showcase my products..." v-model="formData.description"></textarea>
+            <div class="text-danger" v-if="errors.length > 0">
+              <small class="error-message" v-if="failedRules.required">This field is required</small>
+            </div>
+          </div>
+        </validation-provider>
+        <div class="mb-3 float-end">
+          <button id="inquirySubmit" type="submit" class="btn btn-primary mb-3">Submit</button>
+        </div>
+      </form>
+    </validation-observer>
+</div>

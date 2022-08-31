@@ -68,4 +68,16 @@
       </div>
     </div>
   </div>
+
+  <div class="container pt-lg-5">
+    <div class="ms-lg-5 d-flex inquiry-form flex-wrap">
+      <div class="w-100 w-lg-50 position-relative zindex-2">
+        {{ subtitle.subtitle('Contact') }}
+        <div class="mb-5 me-5">{{ title.stringValue('display-5 hover-primary', 'Let&#39;s talk about doing something amazing together.') }}</div>
+      </div>
+      <div class="w-100 w-lg-50">
+        {% include 'templates/components/inquiry-form.twig' %}
+      </div>
+    </div>
+  </div>
 {% endblock %}

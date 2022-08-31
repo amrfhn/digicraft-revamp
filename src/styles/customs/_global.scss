@@ -6,3 +6,11 @@ main {
 html {
   scroll-behavior: smooth;
 }
+
+.hover-primary {
+  &:hover {
+    color: $p2;
+    transition: 0.5s;
+    cursor: context-menu;
+  }
+}

@@ -8,6 +8,7 @@ import * as bootstrap from 'bootstrap'
 // Import the JS components
 // import "./components/scrollmagic";
 import "./components/navigation";
+import "./components/form";
 
 const reworkList = {
     design: 1,
@@ -21,24 +22,3 @@ const reworkListTwo = {
 }
 console.log(reworkList);
 console.log(reworkListTwo);
-
-$(function (){
-
-    console.log($('#hero'));
-    console.log(jQuery('#hero'));
-
-    const hero = new Vue({
-        el: "#hero",
-        data: {
-          test: false,
-        },
-        methods: {
-            testFunction() {
-                console.log('vue is here')
-            }
-        },
-        mounted() {
-            this.testFunction();
-        }
-    })
-})
