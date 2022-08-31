@@ -1,4 +1,4 @@
-<div id="inquiryForm">
+<div id="inquiryForm" v-cloak>
   <validation-observer ref="inquiryForm" v-slot="{ handleSubmit}">
       <form ref="form" @submit.prevent="handleSubmit(onSubmit)">
         <validation-provider slim rules="required" v-slot="{failedRules, errors}">
@@ -37,7 +37,7 @@
         <validation-provider slim rules="required" v-slot="{ failedRules, errors }">
           <div class="mb-3">
             <label for="phoneNumber" class="form-label">Phone Number</label>
-            <input type="number" class="form-control" id="phoneNumber" placeholder="0123456789" v-model="formData.phoneNumber" />
+            <input type="phone" class="form-control" id="phoneNumber" placeholder="0123456789" v-model="formData.phoneNumber" />
             <div class="text-danger" v-if="errors.length > 0">
               <small class="error-message" v-if="failedRules.required">This field is required</small>
             </div>

@@ -1,0 +1,36 @@
+.btn,
+a {
+  border-color: $p2;
+  font-family: $headings-font-family;
+  text-transform: capitalize;
+
+  &.btn-primary {
+    background-color: $p2;
+    color: #000;
+    transition: all 0.3s;
+    padding: 10px 32px;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $p2;
+      color: $p2;
+    }
+  }
+  &:active {
+    border-color: $p2;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  &:focus {
+    box-shadow: none;
+    border-color: $p2;
+  }
+  &:disabled, &.disabled {
+    border-color: #000;
+    opacity: .5;
+    color: $gray-900;
+  }
+}
+
+// a:hover, a:focus, .nav-link:hover, .nav-link:focus

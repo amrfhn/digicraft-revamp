@@ -3,10 +3,11 @@ import {
   ValidationProvider,
   ValidationObserver
  } from 'vee-validate/dist/vee-validate.full';
+import moment from 'moment';
 
 $(function () {
   const hostUrl = window.location.host;
-  const baseUrl = hostUrl.includes('localhost') ? 'http://localhost:3030/api' : 'https://digicraft-api-central.herokuapp.com/api';
+  const baseUrl = hostUrl.includes('localhost') ? 'http://localhost:3030/api' : 'https://digicraft-website.herokuapp.com/api';
 
   const inquiryForm = new Vue({
     el: "#inquiryForm",
@@ -17,6 +18,7 @@ $(function () {
         phoneNumber: '',
         email: '',
         description: '',
+        timestamp: moment().format('MMMM Do YYYY, h:mm:ss a')
       },
       formStatus: '',
       generalSubmitError: '',

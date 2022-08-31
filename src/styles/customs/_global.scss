@@ -14,3 +14,7 @@ html {
     cursor: context-menu;
   }
 }
+
+[v-cloak] {
+  display: none;
+}
