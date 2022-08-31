@@ -34,6 +34,21 @@
     margin-bottom: 20px;
     width: 100%;
 
+    .img-techstack {
+      width: 30px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    #Google-Tag-Manager {
+      width: 90px;
+      height: 30px;
+    }
+    #Google-Analytics {
+      height: 30px;
+      width: 75px;
+    }
+
     @include media-breakpoint-up(lg) {
       min-height: 210px;
       max-width: calc(50% - 40px);

@@ -1,9 +1,13 @@
-{% macro card(cardTitle, cardDescription) %}
+{% macro card(cardTitle, cardDescription, imgCollections) %}
 <div class="card variant-headline">
-  <div class="card-body">
+  <div class="card-body d-flex flex-column justify-content-lg-around">
     <h5 class="card-title">{{cardTitle}}</h5>
     <p class="card-text">{{cardDescription}}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="d-flex justify-content-start">
+      {% for item in imgCollections %}
+        <img id={{item}} title={{item}} class="img-techstack" src="./assets/images/{{item}}.png" alt="item">
+      {% endfor %}
+    </div>
   </div>
 </div>
 {% endmacro %}
