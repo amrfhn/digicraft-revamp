@@ -49,11 +49,12 @@
         <div class="w-100 w-lg-75 mb-5">{{ title.stringValue('display-3', 'Our Services') }}</div>
       </div>
 
-      <div class="d-flex justify-content-start flex-wrap flex-lg-row flex-column">{{ cardHeadline.card('Web Development', 'Build robust and intuitive web experiences that scales easily. We specialize in building modern web apps, websites and single page applications using the latest technologies and best practices.', ['Nodejs', 'Vuejs','Bootstrap', 'Phaser', 'MongoDB']) }}
+      <div class="d-flex justify-content-start flex-wrap flex-lg-row flex-column">
+        {{ cardHeadline.card('Web Development', 'Build robust and intuitive web experiences that scales easily. We specialize in building modern web apps, websites and single page applications using the latest technologies and best practices.', ['Nodejs', 'Vuejs','Bootstrap', 'Phaser', 'MongoDB']) }}
+
+        {{ cardHeadline.card('Digital Invitation Card', 'Build robust and intuitive web experiences that scales easily. We specialize in building modern web apps, websites and single page applications using the latest technologies and best practices.', ['Vuejs','Bootstrap', 'Figma', 'MongoDB']) }}
 
         {{ cardHeadline.card('UI/UX', 'Engaging digital experiences, built for humans. We specialize in translating business requirements into rich user experiences that your customers will love.', ['Adobe-XD', 'Figma']) }}
-
-        {{ cardHeadline.card('API Service', 'Engaging digital experiences, built for humans. We specialize in translating business requirements into rich user experiences that your customers will love.', ['Nodejs']) }}
 
         {{ cardHeadline.card('Analytics', 'We can help you capture valuable insights and metrics into how your customers behave throughout your entire digital experience. This lets your business better target your customers and increase conversion rates.', ['Google-Tag-Manager', 'Google-Analytics']) }}
 
@@ -61,10 +62,18 @@
     </div>
   </div>
 
-  <div class="container pt-lg-5">
+  <div class="container pt-lg-5 pb-5">
     <div class="ms-lg-5">
       <div class="position-relative zindex-2">
         <div class="w-100 w-lg-75 mb-5">{{ title.stringValue('display-3', 'Our Clients') }}</div>
+
+        <div class="d-flex justify-content-start clients-container align-items-center flex-lg-row flex-column">
+          <img class="clients-logo" src="./assets/images/aia.png" alt="aia" title="AIA">
+          <img class="clients-logo" src="./assets/images/andsons.png" alt="andsons" title="Andsons">
+          <img class="clients-logo" src="./assets/images/sunlife.png" alt="sunlife" title="Sunlife">
+          <img class="clients-logo" src="./assets/images/esplanade-offstage.png" alt="esplanade-offstage" title="Esplanade-Offstage">
+          <img class="clients-logo" src="./assets/images/maxxima.png" alt="maxxima" title="Maxxima" />
+        </div>
       </div>
     </div>
   </div>
