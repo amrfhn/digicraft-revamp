@@ -21,7 +21,7 @@
       {{ cardSmall.card('Development', 'We develop smart and modern solutions.') }}</div>
   </div>
 
-  <div class="container pt-2 pt-lg-5 pb-5">
+  <div class="container pt-2 pt-lg-5 pb-5" id="about">
     <div class="ms-lg-5">
       <div class="position-relative zindex-2">
         {{ subtitle.subtitle('Welcome') }}
@@ -42,7 +42,7 @@
     </div>
   </div>
 
-  <div class="container pt-lg-5 pb-5">
+  <div class="container pt-lg-5 pb-5" id="services">
     <div class="ms-lg-5">
       <div class="position-relative zindex-2">
         {{ subtitle.subtitle('Expertise') }}
@@ -50,19 +50,19 @@
       </div>
 
       <div class="d-flex justify-content-start flex-wrap flex-lg-row flex-column">
-        {{ cardHeadline.card('Web Development', 'Build robust and intuitive web experiences that scales easily. We specialize in building modern web apps, websites and single page applications using the latest technologies and best practices.', ['Nodejs', 'Vuejs','Bootstrap', 'Phaser', 'MongoDB']) }}
+        {{ cardHeadline.card('Web Development', 'Create scalable web experiences that are both robust and intuitive. We specialize in developing modern web apps, websites, and single-page applications with the most up-to-date technologies and best practices.', ['Nodejs', 'Vuejs','Bootstrap', 'Phaser', 'MongoDB']) }}
 
-        {{ cardHeadline.card('Digital Invitation Card', 'Build robust and intuitive web experiences that scales easily. We specialize in building modern web apps, websites and single page applications using the latest technologies and best practices.', ['Vuejs','Bootstrap', 'Figma', 'MongoDB']) }}
+        {{ cardHeadline.card('Digital Invitation Card', ' Transition to a more modern way of inviting guests to your event. Get more efficient with sharing the event&#39s location and RSVP data through awesome digital card designs.', ['Vuejs','Bootstrap', 'Figma', 'MongoDB']) }}
 
-        {{ cardHeadline.card('UI/UX', 'Engaging digital experiences, built for humans. We specialize in translating business requirements into rich user experiences that your customers will love.', ['Adobe-XD', 'Figma']) }}
+        {{ cardHeadline.card('UI/UX', 'Engaging digital experiences designed with humans in mind. We specialize in transforming business requirements into engaging user experiences that your customers will appreciate.', ['Adobe-XD', 'Figma']) }}
 
-        {{ cardHeadline.card('Analytics', 'We can help you capture valuable insights and metrics into how your customers behave throughout your entire digital experience. This lets your business better target your customers and increase conversion rates.', ['Google-Tag-Manager', 'Google-Analytics']) }}
+        {{ cardHeadline.card('Analytics', 'We can assist you in capturing valuable insights and metrics about how your customers behave across the entire digital experience. This allows your business to better target customers and increase conversion rates.', ['Google-Tag-Manager', 'Google-Analytics']) }}
 
-        {{ cardHeadline.card('Consulting', 'Leverage on LWDs team of subject matter experts (SME) to plan and drive your businesss digtal transformation.') }}</div>
+        {{ cardHeadline.card('Consulting', 'Use LWD&#39s team of subject matter experts (SME) to plan and manage your company&#39s digital transformation.') }}</div>
     </div>
   </div>
 
-  <div class="container pt-lg-5 pb-5">
+  <div class="container pt-lg-5 pb-5" id="work">
     <div class="ms-lg-5">
       <div class="position-relative zindex-2">
         <div class="w-100 w-lg-75 mb-5">{{ title.stringValue('display-3', 'Our Clients') }}</div>
@@ -78,11 +78,11 @@
     </div>
   </div>
 
-  <div class="container pt-lg-5">
+  <div class="container pt-lg-5" id="contact">
     <div class="ms-lg-5 d-flex inquiry-form flex-wrap">
       <div class="w-100 w-lg-50 position-relative zindex-2">
         {{ subtitle.subtitle('Contact') }}
-        <div class="mb-5 me-5">{{ title.stringValue('display-5 hover-primary', 'Let&#39;s talk about doing something amazing together.') }}</div>
+        <div class="mb-5 me-5">{{ title.stringValue('display-5 hover-primary', 'Let&#39;s talk about doing something spectacular together.') }}</div>
       </div>
       <div class="w-100 w-lg-50">
         {% include 'templates/components/inquiry-form.twig' %}

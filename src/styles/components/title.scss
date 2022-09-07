@@ -1,5 +1,6 @@
 .display-subtitle {
   margin-bottom: 0;
+  color: $s1;
 
   @include media-breakpoint-up(lg) {
     font-size: 14px;

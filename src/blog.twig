@@ -1,0 +1,18 @@
+{% import 'templates/components/hero-title.twig' as title %}
+{% import 'templates/components/small-subtitle.twig' as subtitle %}
+
+{% extends 'templates/partials/base.twig' %}
+{% block main %}
+  <div class="container">
+    <div class="ms-lg-5">
+      <div>
+        {{ subtitle.subtitle('News and insights') }}
+        <div class="w-100 w-lg-75 mb-5">{{ title.stringValue('display-3', 'Blog') }}</div>
+      </div>
+
+      <div class="p-3 my-auto bg-secondary">
+        <p> No records found! </p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
